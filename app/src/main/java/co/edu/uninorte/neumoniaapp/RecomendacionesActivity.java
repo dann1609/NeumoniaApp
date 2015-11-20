@@ -59,8 +59,6 @@ public class RecomendacionesActivity extends AppCompatActivity {
                 tratamiento.setText(getResources().getString(R.string.tratamiento)+" \n1era linea: Amoxicilina/Clavulonato 1g VO, cada 12h con Claritromicina 500mg VO cada 12h por 5 dias\n2da linea: cefuroxima, 500 mg VO cada 12h, con claritromicina 500mg VO, cada 12h por cinco dias" );
             }else{tratamiento.setText(getResources().getString(R.string.tratamiento)+" \n1era linea: Amoxicilina 1 g pVO, cada 8h por 5 dias\n2da linea: claritromicina:500 mg VO, cada 12h por 5 dias");}
 
-
-
         }
 
 
