@@ -42,7 +42,13 @@ public class RecomendacionesActivity extends AppCompatActivity {
                 lugar.setText(getResources().getString(R.string.lugar)+" "+"Ambulatorio");
                 recomendaciones=recomendaciones+"\nAconsejar que visite a su medico si sienten que su condicion no mejora como esperaban." +
                         "\nSi no encuentran mejoría después de 72h de iniciado el tratamiento antibiotico, si la fiebre ha durado mas de " +
-                        "1 semana, si la disnea empeora";
+                        "1 semana, si la disnea empeora, si el pasciente deja de beber, o su nivel de conciencia disminuye." +
+                        "\nEvolucion del tratamiento:" +
+                        "\n1 semana:Cesó la fiebre." +
+                        "\n4 semanas: el dolor en el pecho y producción de esputo han disminuido." +
+                        "\n6 semanas: la tos y falta de aire han disminuido." +
+                        "\n3 meses: la mayoria de los sintomas han cesado, pero puede persistir la fatiga." +
+                        "\n6 meses: la mayoria esta totalmente recuperada";
             }
 
             germen.setText(getResources().getString(R.string.lugar)+"\nNo tiene factores de riesgo para germen específico.");
@@ -68,5 +74,6 @@ public class RecomendacionesActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }
