@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="co.edu.uninorte.neumoniaapp.DatosGeneralesActivity"
+    tools:showIn="@layout/activity_datos_generales">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gtxt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tolera via oral"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:id="@+id/check1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gtxt2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Confusion"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:id="@+id/check2" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gtxt3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Frecuencia respiratoria"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:hint="xxx"
+            android:inputType="number"
+            android:id="@+id/num3" />
+        <TextView
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:text="resp/min"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gtxt4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edad"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:hint="xxx"
+            android:inputType="number"
+            android:id="@+id/num4" />
+        <TextView
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:text="años"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gtxt5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tension Arterial"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:hint="xxx"
+            android:inputType="number"
+            android:id="@+id/num5_1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:text="/"
+            android:textColor="@android:color/black"/>
+        <EditText
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:hint="xxx"
+            android:inputType="number"
+            android:id="@+id/num5_2" />
+        <TextView
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:text="mmHg"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gtxt6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Temperatura(°C)"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:hint="xxx"
+            android:inputType="number"
+            android:id="@+id/num6" />
+        <TextView
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:text="°C"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/listsize"
+        android:gravity="center"
+        android:text="\n\nNota: solicitar cuadro hematico,BUN,UREA,SO2 \n*Realize MiniMental Test"
+        android:textColor="@android:color/black"/>
+
+</LinearLayout>

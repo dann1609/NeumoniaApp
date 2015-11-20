@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="co.edu.uninorte.neumoniaapp.ParaclinicosAActivity"
+    tools:showIn="@layout/activity_paraclinicos_a">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/patxt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="UREA"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:hint="xxx"
+            android:inputType="number"
+            android:id="@+id/num1" />
+        <TextView
+            android:id="@+id/units1"
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:text="mg/dL"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/patxt2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Saturacion de oxigeno"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <EditText
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:hint="xxx"
+            android:inputType="number"
+            android:id="@+id/num2" />
+        <TextView
+            android:id="@+id/units2"
+            android:layout_width="@dimen/listitemwidth"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:text="%"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/patxt3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Efusion pleural"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:id="@+id/check3" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">NeumoniaApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_comorbilidades">Comorbilidades</string>
+    <string name="title_activity_riesgo_social">Riesgo Social</string>
+    <string name="title_activity_datos_generales">Datos Generales</string>
+    <string name="title_activity_configuracion">Configuración</string>
+    <string name="title_activity_paraclinicos_a">Paraclinicos A</string>
+    <string name="title_activity_definir_gravedad">Definir Gravedad</string>
+    <string name="title_activity_recomendaciones">Recomendaciones para su paciente</string>
+
+    <string-array name="configuracion">
+        <item>configuracion</item>
+        <item>UREA o BUN</item>
+        <item>Procalcitonina</item>
+        <item>PRC</item>
+        <item>Saturacion de Oxigeno</item>
+        <item>Gases arteriales</item>
+        <item>Radiografía de Torax</item>
+        <item>Creatinina</item>
+        <item>Gram y cultivo de esputo</item>
+        <item>Gram y cultivo de liquido pleural</item>
+        <item>Citoquimico de liquido pleural</item>
+        <item>Hemograma</item>
+        <item>Toracocentesis</item>
+        <item>Antigeno urinario de neumococo</item>
+        <item>Antigeno urinario de legionella</item>
+        <item>TP y TPT</item>
+        <item>Blirubinas</item>
+    </string-array>
+    <string-array name="comorbilidades">
+        <item>Comorbilidades</item>
+        <item>EPOC</item>
+        <item>Insuficiencia Cardiaca (IC)</item>
+        <item>Diabetis Mellitus (DM)</item>
+        <item>Enfermedad Renal Crónica (ERC)</item>
+        <item>Abuso de alcohol</item>
+        <item>Inmunosupresión</item>
+        <item>Neoplasias</item>
+        <item>Uso de antibióticos previos</item>
+        <item>Alergia a las penicilinas</item>
+        <item>Intolerancia a los macrólidos</item>
+    </string-array>
+
+    <string-array name="riesgosocial">
+        <item>Riesgo Social</item>
+        <item>Incapacidad de autocuidado</item>
+        <item>Alteración cognitiva o mental</item>
+        <item>Incapacidad para mantener la ingestión oral</item>
+        <item>Historia de abuso de psicofármacos</item>
+        <item>Mal soporte familiar y social</item>
+    </string-array>
+
+    <string name="puntaje">\nPuntaje</string>
+    <string name="lugar">\nLugar de atención:</string>
+    <string name="germen">\nFactor de riesgo para germen:</string>
+    <string name="tratamiento">\nTratamiento antibiótico:</string>
+    <string name="recomendacion">\nRecomendaciones finales:</string>
+    <string name="title_activity_paraclinico_b">ParaclinicoBActivity</string>
+
+
+</resources>
