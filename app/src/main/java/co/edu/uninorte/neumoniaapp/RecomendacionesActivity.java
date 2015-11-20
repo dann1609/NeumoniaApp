@@ -32,17 +32,27 @@ public class RecomendacionesActivity extends AppCompatActivity {
         recFinales=(TextView) findViewById(R.id.recFinales);
 
         if(p1.getRisk()==p1.BAJO){
+            String recomendaciones=getResources().getString(R.string.recomendacion);
+
             puntaje.setText(getResources().getString(R.string.puntaje)+" "+p1.getExamTypeToString()+": "+p1.getExam().toString());
             if(p1.getRiesgoSocial()||!(p1.getTolOr())||p1.getSo2()<90||p1.getEfPle()){
                 lugar.setText(getResources().getString(R.string.lugar)+" "+"Hospitalizacion");
             }
-            else{lugar.setText(getResources().getString(R.string.lugar)+" "+"Ambulatorio");}
+            else{
+                lugar.setText(getResources().getString(R.string.lugar)+" "+"Ambulatorio");
+                recomendaciones=recomendaciones+"\nAconsejar que visite a su medico si sienten que su condicion no mejora como esperaban." +
+                        "\nSi no encuentran mejoría después de 72h de iniciado el tratamiento antibiotico, si la fiebre ha durado mas de " +
+                        "1 semana, si la disnea empeora";
+            }
+
+            germen.setText(getResources().getString(R.string.lugar)+"\nNo tiene factores de riesgo para germen específico.");
 
             if(p1.getAlPen()||p1.getInMac()){
                 tratamiento.setText(getResources().getString(R.string.tratamiento)+" \nMoxifloxacina 400mg VO cada 24 horas por 5 dias o levofloxacina 750 mg VO cada 24h");
-            }else if (p1.getComorbilidades()){
+            }else if (p1.getComorbilidadesNoPMac()){
                 tratamiento.setText(getResources().getString(R.string.tratamiento)+" \n1era linea: Amoxicilina/Clavulonato 1g VO, cada 12h con Claritromicina 500mg VO cada 12h por 5 dias\n2da linea: cefuroxima, 500 mg VO cada 12h, con claritromicina 500mg VO, cada 12h por cinco dias" );
             }else{tratamiento.setText(getResources().getString(R.string.tratamiento)+" \n1era linea: Amoxicilina 1 g pVO, cada 8h por 5 dias\n2da linea: claritromicina:500 mg VO, cada 12h por 5 dias");}
+
 
 
         }

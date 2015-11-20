@@ -57,8 +57,15 @@ public class Patient implements Parcelable {
     public Integer getSo2(){return this.so2;}
     public Boolean getEfPle(){return this.efPle;}
 
-    public Boolean getComorbilidades(){
+    public Boolean getComorbilidadesNoPMac(){
         if(epoc||iC||dM||eRC||abAl||inmuno||neoplas){return true;}
+        else{return false;}
+    }
+    public Boolean getComorbilidades(){
+        if(getComorbilidadesNoPMac()||alPen||inMac)
+        {
+            return true;
+        }
         else{return false;}
     }
     public Boolean getAlPen(){return this.alPen;}
