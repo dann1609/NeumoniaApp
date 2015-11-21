@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_riesgo_germen_med"
+    tools:context="co.edu.uninorte.neumoniaapp.RiesgoGermenMedActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gmtxt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Betalactámicos en los ultimos 3 meses"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:id="@+id/gmcheck1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gmtxt2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Exposicion a menores en un centro de cuidado diario u hogar infantil"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:id="@+id/gmcheck2" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gmtxt3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Residencia en un hogar de cuidado crónico o  geriátrico"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:id="@+id/gmcheck3" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gmtxt4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Aspiración o disfagia"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:id="@+id/gmcheck4" />
+    </LinearLayout>
+
+
+</LinearLayout>

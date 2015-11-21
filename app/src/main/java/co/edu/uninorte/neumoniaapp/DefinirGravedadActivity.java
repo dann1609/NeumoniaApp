@@ -32,6 +32,7 @@ public class DefinirGravedadActivity extends AppCompatActivity {
             p1.setExamType(examType);
             if(exam<=1){goToBajo();}
             if(exam==2){goToModerado();}
+            if(exam>=3){goToGrave();}
         }else{
             exam=CRB65();
             examType=p1.CRB65;
@@ -72,11 +73,12 @@ public class DefinirGravedadActivity extends AppCompatActivity {
         context.startActivity(intent);
     }
     private void goToModerado(){
-        Intent intent = new Intent(context, ParaclinicoBActivity.class);
+        Intent intent = new Intent(context, RiesgoGermenMedActivity.class);
         intent.putExtra("userTag",p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
+    private void goToGrave(){}
 
 }

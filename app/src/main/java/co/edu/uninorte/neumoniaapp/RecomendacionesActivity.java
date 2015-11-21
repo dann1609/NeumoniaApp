@@ -73,5 +73,4 @@ public class RecomendacionesActivity extends AppCompatActivity {
         });
     }
 
-
 }

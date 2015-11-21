@@ -54,8 +54,23 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".ParaclinicoBActivity"
-            android:label="@string/title_activity_paraclinico_b"
+            android:name=".RiesgoGermenMedActivity"
+            android:label="@string/title_activity_riesgo_germen_med"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".CriteriosMayoresActivity"
+            android:label="@string/title_activity_criterios_mayores"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".RiesgoGermenGravActivity"
+            android:label="@string/title_activity_riesgo_germen_grav"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".CriteriosMenoresActivity"
+            android:label="@string/title_activity_criterios_menores"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
     </application>

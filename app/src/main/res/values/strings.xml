@@ -51,12 +51,24 @@
         <item>Mal soporte familiar y social</item>
     </string-array>
 
+    <string-array name="germengrave">
+        <item>Germen Grave</item>
+        <item>Terapia con corticosteroides de mas de 10mg</item>
+        <item>Terapia de antibióticos de amplio espectro de  mas de 7 días</item>
+        <item>Mal nutricion</item>
+        <item>Fumador</item>
+        <item>Paciente con VIH tardía</item>
+    </string-array>
+
     <string name="puntaje">\nPuntaje</string>
     <string name="lugar">\nLugar de atención:</string>
     <string name="germen">\nFactor de riesgo para germen:</string>
     <string name="tratamiento">\nTratamiento antibiótico:</string>
     <string name="recomendacion">\nRecomendaciones finales:</string>
-    <string name="title_activity_paraclinico_b">ParaclinicoBActivity</string>
+    <string name="title_activity_riesgo_germen_med">RiesgoGermenMedActivity</string>
+    <string name="title_activity_criterios_mayores">CriteriosMayoresActivity</string>
+    <string name="title_activity_riesgo_germen_grav">RiesgoGermenGravActivity</string>
+    <string name="title_activity_criterios_menores">CriteriosMenoresActivity</string>
 
 
 </resources>
