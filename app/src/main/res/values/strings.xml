@@ -58,6 +58,13 @@
         <item>Mal nutricion</item>
         <item>Fumador</item>
         <item>Paciente con VIH tardía</item>
+        <item>Enfermedad renal crónica en hemodiálisis</item>
+        <item>Infección previa por influenza</item>
+        <item>Neumonía necrosante</item>
+        <item>Infeción en piel concomitante</item>
+        <item>Problemas estructurales pulmonares</item>
+        <item>Obstruccion endotraqueal</item>
+
     </string-array>
 
     <string name="puntaje">\nPuntaje</string>

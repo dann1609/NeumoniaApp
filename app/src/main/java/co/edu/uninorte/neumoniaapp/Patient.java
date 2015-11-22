@@ -13,11 +13,11 @@ public class Patient implements Parcelable {
     private Integer frecRes,edad,tensArtSist,tensArtDiast,temp,urea,so2;  //7
     private Boolean efPle;  //1
     private Integer exam=0,examType=0,risk=0;  //3
-    private Boolean betalac=false,expomen=false,resdhog=false,disfag=false,respmec=false,sopvas=false,infmult=false,hipotens=false;  //8
+    private Boolean betalac=false,expoMen=false,resdHog=false,disfag=false,respMec=false,sopVas=false,infMult=false,hipotens=false;  //8
     private Integer pafio2=0,leucocitos=0,plaquetas=0;  //3
-    private Boolean tercor=false,terant7=false,malnutr=false,fumador=false,vihtard=false; //5
+    private Boolean terCor=false,terAnt7=false,malnutr=false,fumador=false,vihTard=false,eRCH=false,infInf=false,neuNecro=false,infPielConc=false,proStruPul=false,obsEnd=false; //11
 
-    private final static int numprop=44;
+    private final static int numprop=50;
     public final static Integer CURB65=1,CRB65=0,BAJO=0,MEDIO=1,ALTO=2;
 
     public Patient(){}
@@ -92,23 +92,30 @@ public class Patient implements Parcelable {
     public Integer getRisk(){return this.risk;}
     public void setGermenMed(ArrayList list){
         this.betalac= (Boolean) list.get(0);
-        this.expomen=(Boolean) list.get(1);
-        this.resdhog=(Boolean) list.get(2);
+        this.expoMen=(Boolean) list.get(1);
+        this.resdHog=(Boolean) list.get(2);
         this.disfag=(Boolean) list.get(3);
     }
     public void setGermenGrav(ArrayList list){
-        this.tercor= (Boolean) list.get(1);
-        this.terant7= (Boolean) list.get(2);
+        this.terCor= (Boolean) list.get(1);
+        this.terAnt7= (Boolean) list.get(2);
         this.malnutr= (Boolean) list.get(3);
         this.fumador= (Boolean) list.get(4);
-        this.vihtard= (Boolean) list.get(5);
+        this.vihTard= (Boolean) list.get(5);
+        this.eRCH= (Boolean) list.get(6);
+        this.infInf= (Boolean) list.get(7);
+        this.neuNecro= (Boolean) list.get(8);
+        this.infPielConc= (Boolean) list.get(9);
+        this.proStruPul= (Boolean) list.get(10);
+        this.obsEnd= (Boolean) list.get(11);
+
     }
     public void setCriteriosMayores(Boolean b1,Boolean b2){
-        this.respmec=b1;
-        this.sopvas=b2;
+        this.respMec=b1;
+        this.sopVas=b2;
     }
     public void setCriteriosMenores(ArrayList list){
-        this.infmult=(Boolean)list.get(0);
+        this.infMult=(Boolean)list.get(0);
         this.hipotens=(Boolean)list.get(1);
         this.pafio2=(Integer)list.get(2);
         this.leucocitos=(Integer)list.get(3);
@@ -146,24 +153,27 @@ public class Patient implements Parcelable {
         data[26]=Integer.toString(this.examType);
         data[27]=Integer.toString(this.risk);
         data[28]=Boolean.toString(this.betalac);
-        data[29]=Boolean.toString(this.expomen);
-        data[30]=Boolean.toString(this.resdhog);
+        data[29]=Boolean.toString(this.expoMen);
+        data[30]=Boolean.toString(this.resdHog);
         data[31]=Boolean.toString(this.disfag);
-        data[32]=Boolean.toString(this.respmec);
-        data[33]=Boolean.toString(this.sopvas);
-        data[34]=Boolean.toString(this.infmult);
+        data[32]=Boolean.toString(this.respMec);
+        data[33]=Boolean.toString(this.sopVas);
+        data[34]=Boolean.toString(this.infMult);
         data[35]=Boolean.toString(this.hipotens);
         data[36]=Integer.toString(this.pafio2);
         data[37]=Integer.toString(this.leucocitos);
         data[38]=Integer.toString(this.plaquetas);
-        data[39]=Boolean.toString(this.tercor);
-        data[40]=Boolean.toString(this.terant7);
+        data[39]=Boolean.toString(this.terCor);
+        data[40]=Boolean.toString(this.terAnt7);
         data[41]=Boolean.toString(this.malnutr);
         data[42]=Boolean.toString(this.fumador);
-        data[43]=Boolean.toString(this.vihtard);
-
-
-
+        data[43]=Boolean.toString(this.vihTard);
+        data[44]=Boolean.toString(this.eRCH);
+        data[45]=Boolean.toString(this.infInf);
+        data[46]=Boolean.toString(this.neuNecro);
+        data[47]=Boolean.toString(this.infPielConc);
+        data[48]=Boolean.toString(this.proStruPul);
+        data[49]=Boolean.toString(this.obsEnd);
 
         return data;
     }
@@ -200,21 +210,27 @@ public class Patient implements Parcelable {
         this.examType=Integer.parseInt(data[26]);
         this.risk=Integer.parseInt(data[27]);
         this.betalac= Boolean.valueOf(data[28]);
-        this.expomen= Boolean.valueOf(data[29]);
-        this.resdhog= Boolean.valueOf(data[30]);
+        this.expoMen= Boolean.valueOf(data[29]);
+        this.resdHog= Boolean.valueOf(data[30]);
         this.disfag= Boolean.valueOf(data[31]);
-        this.respmec= Boolean.valueOf(data[32]);
-        this.sopvas= Boolean.valueOf(data[33]);
-        this.infmult= Boolean.valueOf(data[34]);
+        this.respMec= Boolean.valueOf(data[32]);
+        this.sopVas= Boolean.valueOf(data[33]);
+        this.infMult= Boolean.valueOf(data[34]);
         this.hipotens= Boolean.valueOf(data[35]);
         this.pafio2=Integer.parseInt(data[36]);
         this.leucocitos=Integer.parseInt(data[37]);
         this.plaquetas=Integer.parseInt(data[38]);
-        this.tercor= Boolean.valueOf(data[39]);
-        this.terant7= Boolean.valueOf(data[40]);
+        this.terCor= Boolean.valueOf(data[39]);
+        this.terAnt7= Boolean.valueOf(data[40]);
         this.malnutr= Boolean.valueOf(data[41]);
         this.fumador= Boolean.valueOf(data[42]);
-        this.vihtard= Boolean.valueOf(data[43]);
+        this.vihTard= Boolean.valueOf(data[43]);
+        this.eRCH= Boolean.valueOf(data[44]);
+        this.infInf= Boolean.valueOf(data[45]);
+        this.neuNecro= Boolean.valueOf(data[46]);
+        this.infPielConc= Boolean.valueOf(data[47]);
+        this.proStruPul= Boolean.valueOf(data[48]);
+        this.obsEnd= Boolean.valueOf(data[49]);
 
     }
     @Override
