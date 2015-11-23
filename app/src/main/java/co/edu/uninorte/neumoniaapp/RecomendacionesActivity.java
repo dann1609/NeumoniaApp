@@ -8,6 +8,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class RecomendacionesActivity extends AppCompatActivity {
@@ -123,11 +124,17 @@ public class RecomendacionesActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                MySQLiteHelper db = new MySQLiteHelper(context);
-                db.addPatient(p1);
-                Patient prueba=db.getPatient("paciente1");
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                String idpaciente=((EditText) findViewById(R.id.num3)).getText().toString();
+                if(idpaciente.equals("")){
+                    Snackbar.make(view, "Los campos no estan completos", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                }else {
+                    MySQLiteHelper db = new MySQLiteHelper(context);
+                    db.addPatient(p1);
+                    Patient prueba = db.getPatient("paciente1");
+                    Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
             }
         });
     }
