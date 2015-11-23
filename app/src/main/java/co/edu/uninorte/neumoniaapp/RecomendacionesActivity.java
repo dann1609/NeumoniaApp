@@ -124,14 +124,15 @@ public class RecomendacionesActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String idpaciente=((EditText) findViewById(R.id.num3)).getText().toString();
+                String idpaciente=((EditText) findViewById(R.id.idpaciente)).getText().toString();
                 if(idpaciente.equals("")){
                     Snackbar.make(view, "Los campos no estan completos", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 }else {
                     MySQLiteHelper db = new MySQLiteHelper(context);
+                    p1.setIdPaciente(idpaciente);
                     db.addPatient(p1);
-                    Patient prueba = db.getPatient("paciente1");
+                    Patient prueba = db.getPatient(idpaciente);
                     Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }

@@ -73,6 +73,21 @@
             android:label="@string/title_activity_criterios_menores"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".DiagnosticoDudosoActivity"
+            android:label="@string/title_activity_diagnostico_dudoso"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".InformacionActivity"
+            android:label="@string/title_activity_informacion"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".PacientesActivity"
+            android:label="@string/title_activity_pacientes"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
     </application>
 
 </manifest>

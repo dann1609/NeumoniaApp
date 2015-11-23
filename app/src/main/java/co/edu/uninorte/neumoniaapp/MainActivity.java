@@ -32,11 +32,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button dud=(Button) findViewById(R.id.dudoso);
+        dud.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, DiagnosticoDudosoActivity.class);
+                startActivity(intent);
+            }
+        });
+
         FloatingActionButton config=(FloatingActionButton) findViewById(R.id.fab_config);
         config.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ConfiguracionActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(intent);
+            }
+        });
+
+        FloatingActionButton patients=(FloatingActionButton) findViewById(R.id.fab_patients);
+        patients.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, PacientesActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(intent);
+            }
+        });
+
+        FloatingActionButton info=(FloatingActionButton) findViewById(R.id.fab_info);
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, InformacionActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
             }

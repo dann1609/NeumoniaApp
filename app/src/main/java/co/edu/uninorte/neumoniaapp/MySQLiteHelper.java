@@ -9,8 +9,6 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by Lucia on 23/11/2015.
@@ -222,8 +220,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     }
 
     // Get All Patients
-    public List<Patient> getAllPatients() {
-        List<Patient> patients = new LinkedList<Patient>();
+    public ArrayList<Patient> getAllPatients() {
+        ArrayList<Patient> patients = new ArrayList<Patient>();
 
         // 1. build the query
         String query = "SELECT  * FROM " + TABLE_PATIENTS;
@@ -245,10 +243,11 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
                 // Add patient to patients
                 patients.add(p1);
+                Log.d("desarrollo","se agrego");
             } while (cursor.moveToNext());
         }
 
-        Log.d("getAllBooks()", String.valueOf(p1.toStringArray()));
+        Log.d("getAllBooks()", p1.toStringArray()[0]);
 
         // return books
         return patients;

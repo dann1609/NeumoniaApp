@@ -76,6 +76,9 @@
     <string name="title_activity_criterios_mayores">CriteriosMayoresActivity</string>
     <string name="title_activity_riesgo_germen_grav">RiesgoGermenGravActivity</string>
     <string name="title_activity_criterios_menores">CriteriosMenoresActivity</string>
+    <string name="title_activity_diagnostico_dudoso">DiagnosticoDudosoActivity</string>
+    <string name="title_activity_informacion">InformacionActivity</string>
+    <string name="title_activity_pacientes">PacientesActivity</string>
 
 
 </resources>
