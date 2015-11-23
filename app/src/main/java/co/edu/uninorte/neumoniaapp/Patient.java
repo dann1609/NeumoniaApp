@@ -9,15 +9,16 @@ import java.util.ArrayList;
  * Created by Lucia on 18/11/2015.
  */
 public class Patient implements Parcelable {
-    private Boolean epoc,iC,dM,eRC,abAl,inmuno,neoplas,anPrev,alPen,inMac,inAut,alCog,inIngOr,abPsi,malSprt,tolOr,conf; //17
-    private Integer frecRes,edad,tensArtSist,tensArtDiast,temp,urea,so2;  //7
-    private Boolean efPle;  //1
+    private Boolean epoc=false,iC=false,dM=false,eRC=false,abAl=false,inmuno=false,neoplas=false,anPrev=false,alPen=false,inMac=false,inAut=false,alCog=false,inIngOr=false,abPsi=false,malSprt=false,tolOr=false,conf=false; //17
+    private Integer frecRes=0,edad=0,tensArtSist=0,tensArtDiast=0,temp=0,urea=0,so2=0;  //7
+    private Boolean efPle=false;  //1
     private Integer exam=0,examType=0,risk=0;  //3
     private Boolean betalac=false,expoMen=false,resdHog=false,disfag=false,respMec=false,sopVas=false,infMult=false,hipotens=false;  //8
     private Integer pafio2=0,leucocitos=0,plaquetas=0;  //3
     private Boolean terCor=false,terAnt7=false,malnutr=false,fumador=false,vihTard=false,eRCH=false,infInf=false,neuNecro=false,infPielConc=false,proStruPul=false,obsEnd=false; //11
+    private String idPaciente="paciente1"; //1
 
-    private final static int numprop=50;
+    private final static int numprop=51;
     public final static Integer CURB65=1,CRB65=0,BAJO=0,MODERADO=1,GRAVE=2;
 
     public Patient(){}
@@ -52,7 +53,9 @@ public class Patient implements Parcelable {
     }
 
 
-
+public String getIdPaciente(){
+    return this.idPaciente;
+}
     public Boolean getRiesgoSocial(){
         if(inAut||alCog||inIngOr||abPsi||malSprt){return true;}
         else {return false;}
@@ -221,13 +224,11 @@ public class Patient implements Parcelable {
         data[47]=Boolean.toString(this.infPielConc);
         data[48]=Boolean.toString(this.proStruPul);
         data[49]=Boolean.toString(this.obsEnd);
+        data[50]=this.idPaciente;
 
         return data;
     }
-    public Patient(Parcel in){
-        String[] data= new String[numprop];
-
-        in.readStringArray(data);
+    public void fromStringArray(String[] data){
         this.epoc= Boolean.valueOf(data[0]);
         this.iC= Boolean.valueOf(data[1]);
         this.dM= Boolean.valueOf(data[2]);
@@ -278,6 +279,13 @@ public class Patient implements Parcelable {
         this.infPielConc= Boolean.valueOf(data[47]);
         this.proStruPul= Boolean.valueOf(data[48]);
         this.obsEnd= Boolean.valueOf(data[49]);
+        this.idPaciente=data[50];
+    }
+    public Patient(Parcel in){
+        String[] data= new String[numprop];
+
+        in.readStringArray(data);
+        fromStringArray(data);
 
     }
     @Override

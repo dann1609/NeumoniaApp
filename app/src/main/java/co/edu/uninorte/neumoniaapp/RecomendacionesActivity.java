@@ -123,6 +123,9 @@ public class RecomendacionesActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                MySQLiteHelper db = new MySQLiteHelper(context);
+                db.addPatient(p1);
+                Patient prueba=db.getPatient("paciente1");
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
