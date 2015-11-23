@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginRight="8dp">
+    <TextView
+        android:id="@+id/checktxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="aca va el textooooooooooooooooooo"
+        android:gravity="center_vertical"
+        android:textSize="22sp"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:id="@+id/check" />
+
+
+</LinearLayout>
+</LinearLayout>

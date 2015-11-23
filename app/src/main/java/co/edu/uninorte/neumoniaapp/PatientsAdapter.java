@@ -58,7 +58,7 @@ public class PatientsAdapter extends BaseAdapter {
         String s=values.get(position).toString();
         if(view==null){
             LayoutInflater inflater =(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view=inflater.inflate(R.layout.check_row,null);
+            view=inflater.inflate(R.layout.patients_row,null);
         }
         CheckBox chk= (CheckBox) view.findViewById(R.id.check);
         TextView txt= (TextView) view.findViewById(R.id.checktxt);

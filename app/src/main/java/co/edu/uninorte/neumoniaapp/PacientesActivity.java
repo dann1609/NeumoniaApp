@@ -18,6 +18,8 @@ public class PacientesActivity extends AppCompatActivity {
     private ListView mLv;
     private PatientsAdapter adapter;
     ArrayList values= new ArrayList<Patient>();
+    public static ArrayList patValues=new ArrayList<Boolean>();
+    MySQLiteHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +29,7 @@ public class PacientesActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        MySQLiteHelper db = new MySQLiteHelper(context);
+        db = new MySQLiteHelper(context);
         values=db.getAllPatients();
 
         mLv=(ListView)findViewById(R.id.listView);
@@ -38,6 +40,18 @@ public class PacientesActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                patValues=adapter.solValues;
+
+                for(int i=0;i<patValues.size();i++) {
+                    if((Boolean)patValues.get(i)){
+                        db.deletePatient((Patient) values.get(i));
+                        values=db.getAllPatients();
+                        adapter=new PatientsAdapter(context,values);
+                        mLv.setAdapter(adapter);
+
+                    }
+                }
+
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
