@@ -10,7 +10,37 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_recomendaciones"
     tools:context="co.edu.uninorte.neumoniaapp.RecomendacionesActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="8dp">
+        <TextView
+            android:id="@+id/gtxt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Paciente"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/listsize"
+            android:textColor="@android:color/black"/>
 
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/listsize"
+            android:gravity="center"
+            android:hint="Nombre o identificacion"
+            android:inputType="textPersonName"
+            android:id="@+id/idpaciente" />
+    </LinearLayout>
     <TextView
         android:id="@+id/puntaje"
         android:layout_width="match_parent"
@@ -52,4 +82,6 @@
         android:textSize="@dimen/recommendation"
         android:textColor="@android:color/black"/>
 
+</LinearLayout>
+    </ScrollView>
 </LinearLayout>

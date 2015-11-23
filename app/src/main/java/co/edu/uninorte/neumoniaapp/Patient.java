@@ -53,9 +53,12 @@ public class Patient implements Parcelable {
     }
 
 
-public String getIdPaciente(){
-    return this.idPaciente;
-}
+    public String getIdPaciente() {
+        return this.idPaciente;
+    }
+    public void setIdPaciente(String id){
+        this.idPaciente=id;
+    }
     public Boolean getRiesgoSocial(){
         if(inAut||alCog||inIngOr||abPsi||malSprt){return true;}
         else {return false;}
