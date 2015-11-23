@@ -67,6 +67,7 @@ public class DefinirGravedadActivity extends AppCompatActivity {
 
     private void goToBajo(){
         Intent intent = new Intent(context, RecomendacionesActivity.class);
+        p1.setRisk(p1.BAJO);
         intent.putExtra("userTag",p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -74,11 +75,19 @@ public class DefinirGravedadActivity extends AppCompatActivity {
     }
     private void goToModerado(){
         Intent intent = new Intent(context, RiesgoGermenMedActivity.class);
+        p1.setRisk(p1.MODERADO);
         intent.putExtra("userTag",p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
-    private void goToGrave(){}
+    private void goToGrave(){
+        Intent intent = new Intent(context, CriteriosMayoresActivity.class);
+        p1.setRisk(p1.GRAVE);
+        intent.putExtra("userTag",p1);
+        Log.d("Desarrollo", "Se abrio la recomendacion");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
 
 }

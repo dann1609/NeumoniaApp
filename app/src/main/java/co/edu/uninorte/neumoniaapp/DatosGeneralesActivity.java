@@ -37,7 +37,6 @@ public class DatosGeneralesActivity extends AppCompatActivity {
                 String in51=((EditText) findViewById(R.id.num5_1)).getText().toString();
                 String in52=((EditText) findViewById(R.id.num5_2)).getText().toString();
                 String in6=((EditText) findViewById(R.id.num6)).getText().toString();
-                datGenValues=new ArrayList<>();
                 if(in3.equals("")||in4.equals("")||in51.equals("")||in52.equals("")||in6.equals("")){
                     Snackbar.make(view, "Los campos no estan completos", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();

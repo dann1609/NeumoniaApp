@@ -30,7 +30,7 @@ public class CriteriosMayoresActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Boolean b1,b2;
                 b1=((CheckBox) findViewById(R.id.cmcheck1)).isChecked();
-                b2=((CheckBox) findViewById(R.id.cmcheck1)).isChecked();
+                b2=((CheckBox) findViewById(R.id.cmcheck2)).isChecked();
                 p1.setCriteriosMayores(b1,b2);
                 if(b1||b2){
                     Intent intent = new Intent(context, RiesgoGermenGravActivity.class);

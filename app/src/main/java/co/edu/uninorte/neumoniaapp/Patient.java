@@ -18,7 +18,7 @@ public class Patient implements Parcelable {
     private Boolean terCor=false,terAnt7=false,malnutr=false,fumador=false,vihTard=false,eRCH=false,infInf=false,neuNecro=false,infPielConc=false,proStruPul=false,obsEnd=false; //11
 
     private final static int numprop=50;
-    public final static Integer CURB65=1,CRB65=0,BAJO=0,MEDIO=1,ALTO=2;
+    public final static Integer CURB65=1,CRB65=0,BAJO=0,MODERADO=1,GRAVE=2;
 
     public Patient(){}
 
@@ -47,6 +47,7 @@ public class Patient implements Parcelable {
         this.temp=(int)a3.get(6);
         this.urea=(Integer)a4.get(0);
         this.so2=(Integer)a4.get(1);
+        this.efPle=(Boolean)a4.get(2);
 
     }
 
@@ -71,9 +72,50 @@ public class Patient implements Parcelable {
         }
         else{return false;}
     }
+    public Boolean get2Comorbilidades(){
+        int sum=((epoc)? 1 : 0)+((iC)? 1 : 0)+((dM)? 1 : 0)+((eRC)? 1 : 0)+((abAl)? 1 : 0)+((inmuno)? 1 : 0)+((neoplas)? 1 : 0)+((alPen)? 1 : 0)+((inMac)? 1 : 0);
+        if (sum>1){
+            return true;
+        }
+        else{return false;}
+    }
+    public Boolean getSPneumoniae(){
+        if(edad>65||betalac||abAl||get2Comorbilidades()||expoMen||resdHog){return true;}
+        else{return false;}
+    }
+    public Boolean getGramMen(){
+        if(disfag||abAl){return true; }
+        else{return false;}
+    }
+    public Boolean getCriteriosMayores(){
+        if(respMec||sopVas){return true;}
+        else{return false;}
+    }
+    public Boolean getCriteriosMenores(){
+        int sum=((infMult)? 1 : 0)+((hipotens)? 1 : 0)+((pafio2<250)? 1 : 0)+((leucocitos<4000)? 1 : 0)+((plaquetas<100000)? 1 : 0)+((infMult)? 1 : 0)+((urea>42.8)? 1 : 0)+((frecRes>30)? 1 : 0)+((temp<36)? 1 : 0);
+        if(sum>=3){return true;}
+        else{return false;}
+    }
+    public Boolean getPAeruginosa(){
+        if(proStruPul||epoc||terCor||terAnt7||malnutr||fumador||vihTard){return true;}
+        else{return false;}
+    }
+    public Boolean getSAureus(){
+        if(eRCH||abPsi||infInf||anPrev||neuNecro||infPielConc||proStruPul||obsEnd){return true;}
+        else{return false;}
+    }
+    public Boolean getVacunaInfluenza(){
+        if(edad>65||iC||dM||eRC){return true;}
+        else{return false;}
+    }
+    public Boolean getVacunaNeumococo(){
+        if(edad>65||iC||epoc||dM||alCog){return true;}
+        else{return false;}
+    }
     public Boolean getAlPen(){return this.alPen;}
     public Boolean getInMac(){return this.inMac;}
 
+    public Boolean getFumador(){return this.fumador;}
     public  Boolean getConf(){return this.conf;}
     public Integer getUrea(){return this.urea;}
     public Integer getFrecRes(){return this.frecRes;}
@@ -90,6 +132,11 @@ public class Patient implements Parcelable {
         return txt;
     }
     public Integer getRisk(){return this.risk;}
+    public void setRisk(Integer risk){
+        if(0<=risk&&risk<=2){
+            this.risk=risk;
+        }
+    }
     public void setGermenMed(ArrayList list){
         this.betalac= (Boolean) list.get(0);
         this.expoMen=(Boolean) list.get(1);

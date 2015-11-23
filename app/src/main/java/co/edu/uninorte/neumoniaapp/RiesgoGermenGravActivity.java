@@ -31,7 +31,7 @@ public class RiesgoGermenGravActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        values.addAll(Arrays.asList(getResources().getStringArray(R.array.riesgosocial)));
+        values.addAll(Arrays.asList(getResources().getStringArray(R.array.germengrave)));
 
 
         mLv=(ListView)findViewById(R.id.listView);

@@ -48,9 +48,9 @@ public class ComorbilidadesActivity extends AppCompatActivity {
                 Intent intent = new Intent(context, RiesgoSocialActivity.class);
                 Log.d("Desarrollo", "Se abrio el RiesgoSocial");
                 startActivity(intent);
-
             }
         });
     }
+
 
 }

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -32,20 +33,28 @@ public class CriteriosMenoresActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cMenValues=new ArrayList();
-                cMenValues.add(((CheckBox) findViewById(R.id.cmencheck1)).isChecked());
-                cMenValues.add(((CheckBox) findViewById(R.id.cmencheck2)).isChecked());
-                cMenValues.add(Integer.parseInt(((EditText) findViewById(R.id.cmennum3)).getText().toString()));
-                cMenValues.add(Integer.parseInt(((EditText) findViewById(R.id.cmennum4)).getText().toString()));
-                cMenValues.add(Integer.parseInt(((EditText) findViewById(R.id.cmennum5)).getText().toString()));
-                p1.setCriteriosMenores(cMenValues);
-                Intent intent = new Intent(context, RiesgoGermenGravActivity.class);
-                intent.putExtra("userTag", p1);
-                Log.d("Desarrollo", "Se abrio riesgo de germen grave");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
+                String in3=((EditText) findViewById(R.id.cmennum3)).getText().toString();
+                String in4=((EditText) findViewById(R.id.cmennum4)).getText().toString();
+                String in5=((EditText) findViewById(R.id.cmennum5)).getText().toString();
 
-
+                if(in3.equals("")||in4.equals("")||in5.equals("")){
+                    Snackbar.make(view, "Los campos no estan completos", Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                }
+                else {
+                    cMenValues = new ArrayList();
+                    cMenValues.add(((CheckBox) findViewById(R.id.cmencheck1)).isChecked());
+                    cMenValues.add(((CheckBox) findViewById(R.id.cmencheck2)).isChecked());
+                    cMenValues.add(Integer.parseInt(((EditText) findViewById(R.id.cmennum3)).getText().toString()));
+                    cMenValues.add(Integer.parseInt(((EditText) findViewById(R.id.cmennum4)).getText().toString()));
+                    cMenValues.add(Integer.parseInt(((EditText) findViewById(R.id.cmennum5)).getText().toString()));
+                    p1.setCriteriosMenores(cMenValues);
+                    Intent intent = new Intent(context, RiesgoGermenGravActivity.class);
+                    intent.putExtra("userTag", p1);
+                    Log.d("Desarrollo", "Se abrio riesgo de germen grave");
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
             }
         });
     }
