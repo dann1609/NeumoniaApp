@@ -19,7 +19,7 @@ public class Patient implements Parcelable {
     private String idPaciente="paciente1"; //1
 
     private final static int numprop=51;
-    public final static Integer CURB65=1,CRB65=0,BAJO=0,MODERADO=1,GRAVE=2,SANO=-1,MUERTO=-2;
+    public final static Integer CURB65=1,CRB65=0,BAJO=0,MODERADO=1,GRAVE=2,SANO=3,MUERTO=4;
 
     public Patient(){}
 
@@ -128,6 +128,7 @@ public class Patient implements Parcelable {
     public Integer getTensArtSist(){return this.tensArtSist;}
     public Integer getTensArtDiast(){return this.tensArtDiast;}
     public Integer getEdad(){return this.edad;}
+    public Integer getTemp(){return this.temp;}
     public void setExam(Integer n){this.exam=n;}
     public void setExamType(Integer n){this.examType=n;}
     public Integer getExam(){return this.exam;}
@@ -139,7 +140,7 @@ public class Patient implements Parcelable {
     }
     public Integer getRisk(){return this.risk;}
     public void setRisk(Integer risk){
-        if(-2<=risk&&risk<=2){
+        if(0<=risk&&risk<=4){
             this.risk=risk;
         }
     }

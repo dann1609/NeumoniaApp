@@ -140,18 +140,7 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
             Integer risk=getArguments().getInt(ARG_SECTION_NUMBER);
             View rootView = inflater.inflate(R.layout.fragment_patients_list, container, false);
             db = new MySQLiteHelper(context);
-            switch (risk){
-                case 3:
-                    values=db.getAllPatients(-1);
-                    break;
-                case 4:
-                    values=db.getAllPatients(-2);
-                    break;
-                default:
-                    values=db.getAllPatients(risk-1);
-                    break;
-            }
-
+            values=db.getAllPatients(risk-1);
 
             //mLv=(ListView)findViewById(R.id.listView);
             //adapter=new PatientsAdapter(this,values);
