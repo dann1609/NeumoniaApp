@@ -66,6 +66,13 @@
         <item>Obstruccion endotraqueal</item>
 
     </string-array>
+    <string-array name="riesgo">
+        <item>Bajo</item>
+        <item>Moderado</item>
+        <item>Grave</item>
+        <item>Sano</item>
+        <item>Muerto</item>
+    </string-array>
 
     <string name="puntaje">\nPuntaje</string>
     <string name="lugar">\nLugar de atención:</string>

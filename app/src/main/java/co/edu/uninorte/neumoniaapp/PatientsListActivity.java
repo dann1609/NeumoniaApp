@@ -67,6 +67,7 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         tabLayout.setupWithViewPager(mViewPager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -139,7 +140,18 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
             Integer risk=getArguments().getInt(ARG_SECTION_NUMBER);
             View rootView = inflater.inflate(R.layout.fragment_patients_list, container, false);
             db = new MySQLiteHelper(context);
-            values=db.getAllPatients(risk-1);
+            switch (risk){
+                case 3:
+                    values=db.getAllPatients(-1);
+                    break;
+                case 4:
+                    values=db.getAllPatients(-2);
+                    break;
+                default:
+                    values=db.getAllPatients(risk-1);
+                    break;
+            }
+
 
             //mLv=(ListView)findViewById(R.id.listView);
             //adapter=new PatientsAdapter(this,values);
@@ -173,18 +185,24 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 5;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
+            String[] riesgo=getResources().getStringArray(R.array.riesgo);
             switch (position) {
+
                 case 0:
-                    return "SECTION 1";
+                    return riesgo[position];
                 case 1:
-                    return "SECTION 2";
+                    return riesgo[position];
                 case 2:
-                    return "SECTION 3";
+                    return riesgo[position];
+                case 3:
+                    return riesgo[position];
+                case 4:
+                    return riesgo[position];
             }
             return null;
         }

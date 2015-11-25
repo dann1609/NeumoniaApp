@@ -19,7 +19,7 @@ public class Patient implements Parcelable {
     private String idPaciente="paciente1"; //1
 
     private final static int numprop=51;
-    public final static Integer CURB65=1,CRB65=0,BAJO=0,MODERADO=1,GRAVE=2;
+    public final static Integer CURB65=1,CRB65=0,BAJO=0,MODERADO=1,GRAVE=2,SANO=-1,MUERTO=-2;
 
     public Patient(){}
 
@@ -139,7 +139,7 @@ public class Patient implements Parcelable {
     }
     public Integer getRisk(){return this.risk;}
     public void setRisk(Integer risk){
-        if(0<=risk&&risk<=2){
+        if(-2<=risk&&risk<=2){
             this.risk=risk;
         }
     }
