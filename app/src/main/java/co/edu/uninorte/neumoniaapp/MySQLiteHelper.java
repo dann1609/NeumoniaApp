@@ -252,6 +252,38 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         // return books
         return patients;
     }
+    public ArrayList<Patient> getAllPatients(Integer risk) {
+        ArrayList<Patient> patients = new ArrayList<Patient>();
+
+        // 1. build the query
+        String query = "SELECT  * FROM " + TABLE_PATIENTS+" WHERE risk="+risk.toString();
+
+        // 2. get reference to writable DB
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(query, null);
+
+        // 3. go over each row, build book and add it to list
+        Patient p1 = null;
+        if (cursor.moveToFirst()) {
+            do {
+                p1 = new Patient();
+                String[] values=new String[p1.toStringArray().length];
+                for (int i=0;i<p1.toStringArray().length;i++) {
+                    values[i]=cursor.getString(i);
+                }
+                p1.fromStringArray(values);
+
+                // Add patient to patients
+                patients.add(p1);
+                Log.d("desarrollo","se agrego");
+            } while (cursor.moveToNext());
+        }
+
+        //Log.d("getAllBooks()", p1.toStringArray()[0]);
+
+        // return books
+        return patients;
+    }
 
     // Updating single patient
     public int updatePatient(Patient p1) {
