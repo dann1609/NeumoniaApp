@@ -8,6 +8,7 @@
     <string name="title_activity_paraclinicos_a">Paraclinicos A</string>
     <string name="title_activity_definir_gravedad">Definir Gravedad</string>
     <string name="title_activity_recomendaciones">Recomendaciones para su paciente</string>
+    <string name="title_activity_recomendaciones_diarias">Recomendaciones para su paciente</string>
 
     <string-array name="configuracion">
         <item>configuracion</item>
@@ -88,6 +89,7 @@
     <string name="title_activity_pacientes">PacientesActivity</string>
     <string name="title_activity_patients_list">PatientsListActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_modificar_datos">ModificarDatosActivity</string>
 
 
 </resources>

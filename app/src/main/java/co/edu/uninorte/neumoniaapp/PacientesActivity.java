@@ -70,7 +70,7 @@ public class PacientesActivity extends AppCompatActivity implements PatientsCard
     }
 
     @Override
-    public void itemClick(View view, int position) {
+    public void itemClick(View view, int position,Patient patient) {
         Log.d("Recyclerview", "Click position " + position);
     }
 }

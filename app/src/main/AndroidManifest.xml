@@ -21,62 +21,70 @@
         <activity
             android:name=".ComorbilidadesActivity"
             android:label="@string/title_activity_comorbilidades"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RiesgoSocialActivity"
             android:label="@string/title_activity_riesgo_social"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DatosGeneralesActivity"
             android:label="@string/title_activity_datos_generales"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ConfiguracionActivity"
             android:label="@string/title_activity_configuracion"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ParaclinicosAActivity"
             android:label="@string/title_activity_paraclinicos_a"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DefinirGravedadActivity"
             android:label="@string/title_activity_definir_gravedad"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RecomendacionesActivity"
             android:label="@string/title_activity_recomendaciones"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RecomendacionesDiariasActivity"
+            android:label="@string/title_activity_recomendaciones_diarias"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RiesgoGermenMedActivity"
             android:label="@string/title_activity_riesgo_germen_med"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CriteriosMayoresActivity"
             android:label="@string/title_activity_criterios_mayores"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RiesgoGermenGravActivity"
             android:label="@string/title_activity_riesgo_germen_grav"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CriteriosMenoresActivity"
             android:label="@string/title_activity_criterios_menores"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".DiagnosticoDudosoActivity"
             android:label="@string/title_activity_diagnostico_dudoso"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".InformacionActivity"
             android:label="@string/title_activity_informacion"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PacientesActivity"
             android:label="@string/title_activity_pacientes"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PatientsListActivity"
             android:label="@string/title_activity_patients_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ModificarDatosActivity"
+            android:label="@string/title_activity_modificar_datos"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

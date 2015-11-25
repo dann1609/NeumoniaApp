@@ -1,6 +1,7 @@
 package co.edu.uninorte.neumoniaapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -105,8 +107,14 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
     }
 
     @Override
-    public void itemClick(View view, int position) {
-
+    public void itemClick(View view, int position,Patient patient) {
+        Log.d("Recyclerview", "Click position " + position);
+        Log.d("Recyclerview", patient.getIdPaciente());
+        Intent intent = new Intent(context, RecomendacionesDiariasActivity.class);
+        intent.putExtra("userTag", patient);
+        Log.d("Desarrollo", "Se abrio criterios menores");
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
     /**

@@ -20,6 +20,7 @@ public class PatientsCardAdapter extends RecyclerView.Adapter<PatientsCardAdapte
     private List<Patient> data = Collections.emptyList();
     private RecyclerClickListner mRecyclerClickListner;
     String[] riesgo;
+    private Patient p1;
 
     public PatientsCardAdapter(Context context,List<Patient> data){
         inflater = LayoutInflater.from(context);
@@ -37,7 +38,7 @@ public class PatientsCardAdapter extends RecyclerView.Adapter<PatientsCardAdapte
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Patient p1 = data.get(position);
+        p1 = data.get(position);
 
 
         holder.id.setText(p1.getIdPaciente());
@@ -77,13 +78,13 @@ public class PatientsCardAdapter extends RecyclerView.Adapter<PatientsCardAdapte
         @Override
         public void onClick(View v) {
             if (mRecyclerClickListner != null) {
-                mRecyclerClickListner.itemClick(v, getPosition());
+                mRecyclerClickListner.itemClick(v, getPosition(),p1);
             }
         }
     }
 
     public interface RecyclerClickListner
     {
-        public void itemClick(View view, int position);
+        public void itemClick(View view, int position,Patient patient);
     }
 }
