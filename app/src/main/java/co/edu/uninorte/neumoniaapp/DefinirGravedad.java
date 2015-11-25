@@ -1,32 +1,38 @@
 package co.edu.uninorte.neumoniaapp;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
-public class DefinirGravedadActivity extends AppCompatActivity {
+public class DefinirGravedad {
 
-    Context context;
+    private Context mContext;
     Patient p1;
     Integer exam,examType;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_definir_gravedad);
-        context=getApplicationContext();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        Boolean UREA = sp.getBoolean(getResources().getStringArray(R.array.configuracion)[1], false);
-        p1=new Patient(ComorbilidadesActivity.comValues,RiesgoSocialActivity.risSocValues,DatosGeneralesActivity.datGenValues,ParaclinicosAActivity.paraAValues);
+
+    public DefinirGravedad(Context mContext, Patient p1) {
+        this.mContext = mContext;
+        this.p1 = p1;
+    }
+
+    public DefinirGravedad() {
+
+    }
+
+    public void calcular(Context mContext){
+
+        this.mContext = mContext;
+        this.p1 = p1;
+
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mContext);
+        Boolean UREA = sp.getBoolean(mContext.getResources().getStringArray(R.array.configuracion)[1], false);
+        Patient p1 = new Patient(ComorbilidadesActivity.comValues,RiesgoSocialActivity.risSocValues,DatosGeneralesActivity.datGenValues,ParaclinicosAActivity.paraAValues);
 
         if(UREA){
-          exam=CURB65();
+            exam=CURB65();
             examType=p1.CURB65;
             p1.setExam(exam);
             p1.setExamType(examType);
@@ -43,6 +49,7 @@ public class DefinirGravedadActivity extends AppCompatActivity {
         }
 
     }
+
 
     private Integer CURB65(){
         Integer result=0;
@@ -66,28 +73,29 @@ public class DefinirGravedadActivity extends AppCompatActivity {
     }
 
     private void goToBajo(){
-        Intent intent = new Intent(context, RecomendacionesActivity.class);
+        Intent intent = new Intent(mContext, RecomendacionesActivity.class);
         p1.setRisk(p1.BAJO);
         intent.putExtra("userTag",p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        mContext.startActivity(intent);
     }
     private void goToModerado(){
-        Intent intent = new Intent(context, RiesgoGermenMedActivity.class);
+        Intent intent = new Intent(mContext, RiesgoGermenMedActivity.class);
         p1.setRisk(p1.MODERADO);
         intent.putExtra("userTag",p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        mContext.startActivity(intent);
     }
     private void goToGrave(){
-        Intent intent = new Intent(context, CriteriosMayoresActivity.class);
+        Intent intent = new Intent(mContext, CriteriosMayoresActivity.class);
         p1.setRisk(p1.GRAVE);
         intent.putExtra("userTag",p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(intent);
+        mContext.startActivity(intent);
     }
+
 
 }

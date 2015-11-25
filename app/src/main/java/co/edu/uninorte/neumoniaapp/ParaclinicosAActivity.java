@@ -110,10 +110,12 @@ public class ParaclinicosAActivity extends AppCompatActivity {
                         paraAValues.add(Integer.parseInt(in2));
                     }
                     paraAValues.add(((CheckBox) findViewById(R.id.check3)).isChecked());
-                    Intent intent = new Intent(context, DefinirGravedadActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    Log.d("Desarrollo", "Se abrio la definicion de gravedad");
-                    context.startActivity(intent);
+                    //Intent intent = new Intent(context, DefinirGravedadActivity.class);
+                    //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    //Log.d("Desarrollo", "Se abrio la definicion de gravedad");
+                    //context.startActivity(intent);
+                    DefinirGravedad gravedad = new DefinirGravedad();
+                    gravedad.calcular(getApplicationContext());
 
                 }
 

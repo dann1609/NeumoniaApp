@@ -39,10 +39,6 @@
             android:label="@string/title_activity_paraclinicos_a"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".DefinirGravedadActivity"
-            android:label="@string/title_activity_definir_gravedad"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".RecomendacionesActivity"
             android:label="@string/title_activity_recomendaciones"
             android:theme="@style/AppTheme.NoActionBar" />
