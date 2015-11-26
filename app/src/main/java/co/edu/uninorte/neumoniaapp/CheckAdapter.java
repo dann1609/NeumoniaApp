@@ -2,10 +2,13 @@ package co.edu.uninorte.neumoniaapp;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -69,13 +72,13 @@ public class CheckAdapter extends BaseAdapter {
         chk.setVisibility(View.VISIBLE);
         txt.setVisibility(View.VISIBLE);
         txt.setTextColor(Color.BLACK);
-        if(position==0 ){
+        /*if(position==0 ){
             chk.setVisibility(View.GONE);
             txt.setVisibility(View.GONE);
             txt.setText(values.get(position).toString().toUpperCase());
             txt.setTextColor(context.getResources().getColor(R.color.colorPrimary));
         }
-
+*/
 
         chk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +93,28 @@ public class CheckAdapter extends BaseAdapter {
             }
         });
         view.setTag(s);
+        view.setMinimumHeight(getH(view));
         return view;
     }
+
+    private int getH(View view){
+
+        Display display = ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
+        DisplayMetrics dm = new DisplayMetrics();
+        display.getMetrics(dm);
+        int h = view.getHeight();
+        int height = dm.heightPixels;
+        int listItemHeight = (int) ((height *0.6) / getCount());
+
+
+        if (h * getCount() >  height) {
+            Log.d(TAG, "Op1 h " + h + " height " + height + " listItemHeight " + listItemHeight + " " + getCount());
+            return h;
+        }
+        else {
+            Log.d(TAG, "Op2 h " + h + " height " + height + " listItemHeight " + listItemHeight + " " + getCount());
+            return listItemHeight;
+        }
+    }
+
 }

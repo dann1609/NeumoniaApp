@@ -12,7 +12,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="aca va el textooooooooooooooooooo"
+        android:text="Incapacidad"
+        android:layout_margin="3dp"
         android:gravity="center_vertical"
         android:textSize="22sp"/>
 
@@ -20,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:textSize="26sp"
+        android:layout_margin="3dp"
         android:gravity="center"
         android:id="@+id/check" />
 

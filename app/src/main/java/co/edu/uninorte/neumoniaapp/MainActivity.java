@@ -66,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, InformacionActivity.class);
+                //overridePendingTransition(R.xml.animation_enter, R.xml.animation_leave);
+                //overridePendingTransition(R.xml.slide_in_right, R.xml.slide_out_right);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
             }
@@ -98,5 +100,12 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         // TODO Auto-generated method stub
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        overridePendingTransition(R.xml.slide_in_right, R.xml.slide_out_right);
     }
 }

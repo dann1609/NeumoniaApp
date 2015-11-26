@@ -53,4 +53,10 @@ public class ComorbilidadesActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        overridePendingTransition(R.xml.slide_in_right, R.xml.slide_out_right);
+    }
 }
