@@ -162,4 +162,11 @@ public class RecomendacionesDiariasActivity extends AppCompatActivity {
         return recomendaciones;
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(context, PatientsListActivity.class);
+        Log.d("Desarrollo", "Se abrio el LA lista de pacientes");
+        ModificarDatosActivity.active=false;
+        startActivity(intent);
+    }
 }

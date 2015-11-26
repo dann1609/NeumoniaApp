@@ -203,4 +203,11 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
             return null;
         }
     }
+    public void onBackPressed() {
+        Intent intent = new Intent(context, MainActivity.class);
+        Log.d("Desarrollo", "Se abrio el LA lista de pacientes");
+        ModificarDatosActivity.active=false;
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
 }

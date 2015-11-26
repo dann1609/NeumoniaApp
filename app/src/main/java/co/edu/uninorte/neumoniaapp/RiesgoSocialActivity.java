@@ -42,11 +42,20 @@ public class RiesgoSocialActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 risSocValues=adapter.solValues;
-                
-                Intent intent = new Intent(context, DatosGeneralesActivity.class);
-                Log.d("Desarrollo", "Se abrio el Riesgo Social");
-                startActivity(intent);
-                overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+                if(!ModificarDatosActivity.active) {
+                    Intent intent = new Intent(context, DatosGeneralesActivity.class);
+                    Log.d("Desarrollo", "Se abrio datos generales");
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+                }else{
+                    Intent intent = new Intent(context, PatientsListActivity.class);
+                    Log.d("Desarrollo", "Se abrio el LA lista de pacientes");
+                    ModificarDatosActivity.active=false;
+                    ModificarDatosActivity.editar();
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                    overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+                }
             }
         });
     }

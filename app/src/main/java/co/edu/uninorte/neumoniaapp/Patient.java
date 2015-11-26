@@ -52,7 +52,52 @@ public class Patient implements Parcelable {
 
     }
 
+    public void modify(ArrayList a0, ArrayList a1,ArrayList a2){
 
+        this.tolOr=(Boolean)a0.get(2);
+        this.temp=(Integer)a0.get(3);
+        this.frecRes=(Integer)a0.get(5);
+        this.tensArtSist=(Integer)a0.get(6);
+        this.tensArtDiast=(Integer)a0.get(7);
+        this.so2=(Integer)a0.get(8);
+
+        this.epoc=(Boolean)a1.get(1);
+        this.iC=(Boolean)a1.get(2);
+        this.dM=(Boolean)a1.get(3);
+        this.eRC=(Boolean)a1.get(4);
+        this.abAl=(Boolean)a1.get(5);
+        this.inmuno=(Boolean)a1.get(6);
+        this.neoplas=(Boolean)a1.get(7);
+        this.anPrev=(Boolean)a1.get(8);
+        this.alPen=(Boolean)a1.get(9);
+        this.inMac=(Boolean)a1.get(10);
+        this.inAut=(Boolean)a2.get(1);
+        this.alCog=(Boolean)a2.get(2);
+        this.inIngOr=(Boolean)a2.get(3);
+        this.abPsi=(Boolean)a2.get(4);
+        this.malSprt=(Boolean)a2.get(5);
+
+    }
+
+    public Boolean getSalida(){
+        Integer result=0;
+        if(this.frecRes>24){result++;}
+        if(this.frecRes>24){result++;}
+        if(this.tensArtSist<90){result++;}
+        if(this.so2<90){result++;}
+        if(!this.tolOr){result++;}
+        if(conf){result++;}
+        if(this.temp>37.8){result++;}
+        if(getComorbilidades()){result++;}
+        if(getRiesgoSocial()){result++;}
+
+
+        if(result<2&&!(this.temp>37.8)){
+            return true;
+        }else{
+            return false;
+        }
+    }
     public String getIdPaciente() {
         return this.idPaciente;
     }

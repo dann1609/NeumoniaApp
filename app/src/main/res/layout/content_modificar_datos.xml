@@ -12,11 +12,13 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="co.edu.uninorte.neumoniaapp.ModificarDatosActivity"
     tools:showIn="@layout/activity_modificar_datos">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
@@ -45,6 +47,7 @@
                 android:inputType="number"
                 android:id="@+id/num1" />
             <TextView
+                android:id="@+id/units1"
                 android:layout_width="@dimen/listitemwidth"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/listsize"
@@ -78,6 +81,7 @@
                 android:inputType="number"
                 android:id="@+id/num2" />
             <TextView
+                android:id="@+id/units2"
                 android:layout_width="@dimen/listitemwidth"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/listsize"
@@ -290,10 +294,9 @@
                 android:textColor="@android:color/black"/>
         </LinearLayout>
     </LinearLayout>
+</ScrollView>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize" />

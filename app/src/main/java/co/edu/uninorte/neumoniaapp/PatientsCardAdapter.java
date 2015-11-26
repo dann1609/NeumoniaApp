@@ -2,6 +2,7 @@ package co.edu.uninorte.neumoniaapp;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,7 +79,8 @@ public class PatientsCardAdapter extends RecyclerView.Adapter<PatientsCardAdapte
         @Override
         public void onClick(View v) {
             if (mRecyclerClickListner != null) {
-                mRecyclerClickListner.itemClick(v, getPosition(),p1);
+                mRecyclerClickListner.itemClick(v, getPosition(),data.get(getPosition()));
+                Log.d("desarrollo",Integer.toString(getPosition()));
             }
         }
     }
