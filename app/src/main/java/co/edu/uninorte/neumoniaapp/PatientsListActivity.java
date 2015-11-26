@@ -104,6 +104,7 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
         Log.d("Desarrollo", "Se abrio criterios menores");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
+        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
 
     /**
@@ -198,5 +199,7 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
         ModificarDatosActivity.active=false;
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
+        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
+
 }

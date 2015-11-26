@@ -48,8 +48,13 @@ public class RiesgoGermenGravActivity extends AppCompatActivity {
                 Log.d("Desarrollo", "Se abrio la recomendacion");
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
+                overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
             }
         });
     }
-
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
+    }
 }

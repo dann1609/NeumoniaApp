@@ -38,15 +38,22 @@ public class CriteriosMayoresActivity extends AppCompatActivity {
                     Log.d("Desarrollo", "Se abrio riesgo de germen grave");
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
+                    overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
                 }else{
                     Intent intent = new Intent(context, CriteriosMenoresActivity.class);
                     intent.putExtra("userTag", p1);
                     Log.d("Desarrollo", "Se abrio criterios menores");
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
+                    overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
                 }
             }
         });
+    }
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
     }
 
 }

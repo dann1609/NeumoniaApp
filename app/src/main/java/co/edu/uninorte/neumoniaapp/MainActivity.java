@@ -49,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, ConfiguracionActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
+                overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
             }
         });
 
@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, PatientsListActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
+                overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
             }
         });
 
@@ -71,8 +71,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(context, InformacionActivity.class);
                 //overridePendingTransition(R.xml.animation_enter, R.xml.animation_leave);
                 //overridePendingTransition(R.xml.slide_in_right, R.xml.slide_out_right);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
+                overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
             }
         });
     }

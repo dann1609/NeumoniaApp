@@ -60,5 +60,9 @@ public class ConfiguracionActivity extends AppCompatActivity {
             }
         });
     }
-
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+    }
 }

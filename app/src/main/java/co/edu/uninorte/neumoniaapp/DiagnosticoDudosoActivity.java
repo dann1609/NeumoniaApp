@@ -15,5 +15,10 @@ public class DiagnosticoDudosoActivity extends AppCompatActivity {
 
 
     }
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
+    }
 
 }

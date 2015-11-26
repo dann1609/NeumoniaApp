@@ -102,6 +102,7 @@ public class ParaclinicosAActivity extends AppCompatActivity {
                     //context.startActivity(intent);
                     DefinirGravedad gravedad = new DefinirGravedad();
                     gravedad.calcular(getApplicationContext());
+                    overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
 
                 }
 
@@ -112,7 +113,11 @@ public class ParaclinicosAActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+       // overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
-
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
+    }
 }

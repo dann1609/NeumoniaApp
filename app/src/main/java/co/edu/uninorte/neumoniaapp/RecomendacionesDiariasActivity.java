@@ -43,6 +43,7 @@ public class RecomendacionesDiariasActivity extends AppCompatActivity {
                 Log.d("Desarrollo", "Se abrio la edicion");
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
+                overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
                 }
 
         });
@@ -168,5 +169,7 @@ public class RecomendacionesDiariasActivity extends AppCompatActivity {
         Log.d("Desarrollo", "Se abrio el LA lista de pacientes");
         ModificarDatosActivity.active=false;
         startActivity(intent);
+        overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
     }
+
 }

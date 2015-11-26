@@ -138,6 +138,7 @@ public class RecomendacionesActivity extends AppCompatActivity {
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     Log.d("Desarrollo", "Se abrio el Home");
                     startActivity(intent);
+                    overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
                 }
             }
         });
@@ -167,5 +168,9 @@ public class RecomendacionesActivity extends AppCompatActivity {
 
         return recomendaciones;
     }
-
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
+    }
 }
