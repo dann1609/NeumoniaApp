@@ -13,11 +13,287 @@
     tools:context="co.edu.uninorte.neumoniaapp.ModificarDatosActivity"
     tools:showIn="@layout/activity_modificar_datos">
 
-    <ListView
-        android:id="@+id/listViewModificarDatos"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"></ListView>
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:id="@+id/mtxt1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PCR"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/listsize"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:hint="xxx"
+                android:inputType="number"
+                android:id="@+id/num1" />
+            <TextView
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:text="ng/ml"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:id="@+id/mtxt2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Procalcitonina"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/listsize"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:hint="xxx"
+                android:inputType="number"
+                android:id="@+id/num2" />
+            <TextView
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:text="mg/L"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:id="@+id/mtxt3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tolerancia via oral"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/listsize"
+                android:textColor="@android:color/black"/>
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:id="@+id/check3" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:id="@+id/mtxt4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Temperatura"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/listsize"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:hint="xxx"
+                android:inputType="number"
+                android:id="@+id/num4" />
+            <TextView
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:text="°C"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:id="@+id/mtxt5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Frecuencia cardiaca"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/listsize"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:hint="xxx"
+                android:inputType="number"
+                android:id="@+id/num5" />
+            <TextView
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:text="Frec Cardiaca"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:id="@+id/mtxt6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Frec Resp"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/listsize"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:hint="xxx"
+                android:inputType="number"
+                android:id="@+id/num6" />
+            <TextView
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:text="resp/min"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:id="@+id/mtxt7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tension Arterial"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/listsize"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:hint="xxx"
+                android:inputType="number"
+                android:id="@+id/num7_1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:text="/"
+                android:textColor="@android:color/black"/>
+            <EditText
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:hint="xxx"
+                android:inputType="number"
+                android:id="@+id/num7_2" />
+            <TextView
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:text="mmHg"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp">
+            <TextView
+                android:id="@+id/mtxt8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SO2"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/listsize"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:hint="xxx"
+                android:inputType="number"
+                android:id="@+id/num8" />
+            <TextView
+                android:layout_width="@dimen/listitemwidth"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/listsize"
+                android:gravity="center"
+                android:text="%"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize" />

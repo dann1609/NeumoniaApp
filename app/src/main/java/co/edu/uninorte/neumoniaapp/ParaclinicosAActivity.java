@@ -1,7 +1,6 @@
 package co.edu.uninorte.neumoniaapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,7 +9,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -62,18 +60,6 @@ public class ParaclinicosAActivity extends AppCompatActivity {
             check3.setEnabled(false);
             check3.setTextColor(Color.LTGRAY);
         }
-        paraAValues=new ArrayList();
-        if(!UREA&&!SO2&&!RX){
-            paraAValues.add(0);
-            paraAValues.add(100);
-            paraAValues.add(((CheckBox) findViewById(R.id.check3)).isChecked());
-            //Intent intent = new Intent(context, DefinirGravedadActivity.class);
-            //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            //Log.d("Desarrollo", "Se abrio la definicion de gravedad");
-            //context.startActivity(intent);
-        }
-
-
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -122,6 +108,11 @@ public class ParaclinicosAActivity extends AppCompatActivity {
 
             }
         });
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
 
 }

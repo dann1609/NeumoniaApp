@@ -181,8 +181,8 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 5;
+            // Show 4 total pages.
+            return 4;
         }
 
         @Override
@@ -198,8 +198,7 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
                     return riesgo[position];
                 case 3:
                     return riesgo[position];
-                case 4:
-                    return riesgo[position];
+
             }
             return null;
         }

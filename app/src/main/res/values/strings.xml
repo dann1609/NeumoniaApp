@@ -9,6 +9,16 @@
     <string name="title_activity_definir_gravedad">Definir Gravedad</string>
     <string name="title_activity_recomendaciones">Recomendaciones para su paciente</string>
     <string name="title_activity_recomendaciones_diarias">Recomendaciones para su paciente</string>
+    <string name="title_activity_riesgo_germen_med">Riesgo de Germen</string>
+    <string name="title_activity_criterios_mayores">Criterios Mayores</string>
+    <string name="title_activity_riesgo_germen_grav">Riesgo de Germen</string>
+    <string name="title_activity_criterios_menores">Criterios Menores</string>
+    <string name="title_activity_diagnostico_dudoso">Diagnostico Dudoso</string>
+    <string name="title_activity_informacion">Informacion</string>
+    <string name="title_activity_pacientes">Pacientes</string>
+    <string name="title_activity_patients_list">Lista de pacientes</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_modificar_datos">Ingreso de estado actual</string>
 
     <string-array name="configuracion">
         <item>configuracion</item>
@@ -30,6 +40,7 @@
         <item>Blirubinas</item>
     </string-array>
     <string-array name="comorbilidades">
+        <item>Comorbilidades</item>
         <item>EPOC</item>
         <item>Insuficiencia Cardiaca (IC)</item>
         <item>Diabetis Mellitus (DM)</item>
@@ -70,8 +81,7 @@
         <item>Bajo</item>
         <item>Moderado</item>
         <item>Grave</item>
-        <item>Sano</item>
-        <item>Muerto</item>
+        <item>Historial</item>
     </string-array>
 
     <string name="puntaje">\nPuntaje</string>
@@ -79,16 +89,7 @@
     <string name="germen">\nFactor de riesgo para germen:</string>
     <string name="tratamiento">\nTratamiento antibiótico:</string>
     <string name="recomendacion">\nRecomendaciones finales:</string>
-    <string name="title_activity_riesgo_germen_med">RiesgoGermenMedActivity</string>
-    <string name="title_activity_criterios_mayores">CriteriosMayoresActivity</string>
-    <string name="title_activity_riesgo_germen_grav">RiesgoGermenGravActivity</string>
-    <string name="title_activity_criterios_menores">CriteriosMenoresActivity</string>
-    <string name="title_activity_diagnostico_dudoso">DiagnosticoDudosoActivity</string>
-    <string name="title_activity_informacion">InformacionActivity</string>
-    <string name="title_activity_pacientes">PacientesActivity</string>
-    <string name="title_activity_patients_list">PatientsListActivity</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_modificar_datos">ModificarDatosActivity</string>
+
 
 
 </resources>

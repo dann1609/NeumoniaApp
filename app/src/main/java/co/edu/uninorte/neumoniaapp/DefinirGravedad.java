@@ -15,7 +15,6 @@ public class DefinirGravedad {
 
     public DefinirGravedad(Context mContext, Patient p1) {
         this.mContext = mContext;
-        this.p1 = p1;
     }
 
     public DefinirGravedad() {
@@ -25,11 +24,10 @@ public class DefinirGravedad {
     public void calcular(Context mContext){
 
         this.mContext = mContext;
-        this.p1 = p1;
 
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(mContext);
         Boolean UREA = sp.getBoolean(mContext.getResources().getStringArray(R.array.configuracion)[1], false);
-        Patient p1 = new Patient(ComorbilidadesActivity.comValues,RiesgoSocialActivity.risSocValues,DatosGeneralesActivity.datGenValues,ParaclinicosAActivity.paraAValues);
+        p1 = new Patient(ComorbilidadesActivity.comValues,RiesgoSocialActivity.risSocValues,DatosGeneralesActivity.datGenValues,ParaclinicosAActivity.paraAValues);
 
         if(UREA){
             exam=CURB65();
@@ -64,6 +62,7 @@ public class DefinirGravedad {
 
     private Integer CRB65(){
         Integer result=0;
+        Log.d("desarrollo a",Boolean.toString(p1.getConf()));
         if(p1.getConf()){result++;}
         if(p1.getFrecRes()>=30){result++;}
         if(p1.getTensArtSist()<90){result++;}
@@ -75,7 +74,7 @@ public class DefinirGravedad {
     private void goToBajo(){
         Intent intent = new Intent(mContext, RecomendacionesActivity.class);
         p1.setRisk(p1.BAJO);
-        intent.putExtra("userTag",p1);
+        intent.putExtra("userTag", p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(intent);
@@ -83,7 +82,7 @@ public class DefinirGravedad {
     private void goToModerado(){
         Intent intent = new Intent(mContext, RiesgoGermenMedActivity.class);
         p1.setRisk(p1.MODERADO);
-        intent.putExtra("userTag",p1);
+        intent.putExtra("userTag", p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(intent);
@@ -91,7 +90,7 @@ public class DefinirGravedad {
     private void goToGrave(){
         Intent intent = new Intent(mContext, CriteriosMayoresActivity.class);
         p1.setRisk(p1.GRAVE);
-        intent.putExtra("userTag",p1);
+        intent.putExtra("userTag", p1);
         Log.d("Desarrollo", "Se abrio la recomendacion");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         mContext.startActivity(intent);

@@ -48,15 +48,22 @@ public class ComorbilidadesActivity extends AppCompatActivity {
                 Intent intent = new Intent(context, RiesgoSocialActivity.class);
                 Log.d("Desarrollo", "Se abrio el RiesgoSocial");
                 startActivity(intent);
+                overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
             }
         });
     }
-
+    @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
+    }
 
     @Override
     protected void onPause() {
         super.onPause();
+        //overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
         //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        overridePendingTransition(R.xml.slide_in_right, R.xml.slide_out_right);
+        //overridePendingTransition(R.xml.slide_in_right, R.xml.slide_out_right);
     }
 }

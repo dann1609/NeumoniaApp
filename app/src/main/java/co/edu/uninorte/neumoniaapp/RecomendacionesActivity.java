@@ -135,7 +135,8 @@ public class RecomendacionesActivity extends AppCompatActivity {
                     db.addPatient(p1);
                     Patient prueba = db.getPatient(idpaciente);
                     Intent intent = new Intent(context, MainActivity.class);
-                    Log.d("Desarrollo", "Se abrio el RiesgoSocial");
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    Log.d("Desarrollo", "Se abrio el Inicio RiesgoSocial");
                     startActivity(intent);
                 }
             }

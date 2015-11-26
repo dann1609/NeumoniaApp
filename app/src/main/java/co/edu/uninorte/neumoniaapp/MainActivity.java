@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(context, ComorbilidadesActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
             }
         });
 
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(context, DiagnosticoDudosoActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
             }
         });
 
@@ -106,6 +108,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        overridePendingTransition(R.xml.slide_in_right, R.xml.slide_out_right);
+
     }
 }

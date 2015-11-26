@@ -46,8 +46,15 @@ public class RiesgoSocialActivity extends AppCompatActivity {
                 Intent intent = new Intent(context, DatosGeneralesActivity.class);
                 Log.d("Desarrollo", "Se abrio el Riesgo Social");
                 startActivity(intent);
+                overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        overridePendingTransition(R.anim.activity_back_in, R.anim.activity_back_out);
     }
 
 }

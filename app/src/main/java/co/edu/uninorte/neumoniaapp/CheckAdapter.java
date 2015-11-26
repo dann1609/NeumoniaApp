@@ -72,18 +72,20 @@ public class CheckAdapter extends BaseAdapter {
         chk.setVisibility(View.VISIBLE);
         txt.setVisibility(View.VISIBLE);
         txt.setTextColor(Color.BLACK);
-        /*if(position==0 ){
+        view.setMinimumHeight(getH(view));
+        if(position==0 ){
+            view.setMinimumHeight(0);
             chk.setVisibility(View.GONE);
             txt.setVisibility(View.GONE);
             txt.setText(values.get(position).toString().toUpperCase());
             txt.setTextColor(context.getResources().getColor(R.color.colorPrimary));
         }
-*/
+
 
         chk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CheckBox chk=(CheckBox) view;
+                CheckBox chk = (CheckBox) view;
                 boolean isChecked = chk.isChecked();
                 solValues.set(position, isChecked);
                 Log.d("prueba", Boolean.toString(isChecked));
@@ -93,7 +95,7 @@ public class CheckAdapter extends BaseAdapter {
             }
         });
         view.setTag(s);
-        view.setMinimumHeight(getH(view));
+
         return view;
     }
 
