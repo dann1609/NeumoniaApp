@@ -92,7 +92,9 @@ public class RecomendacionesDiariasActivity extends AppCompatActivity {
             if(p1.getAlPen()||p1.getInMac()){
                 tratamientotxt="\nDoxiciclina 100mg por VO cada 12h.";
             }
-            lugar.setText(getResources().getString(R.string.lugar)+" "+"Hospitalizacion");
+            if(p1.getExamType()==p1.CURB65) {
+                lugar.setText(getResources().getString(R.string.lugar) + " " + "Hospitalizacion");
+            }else{lugar.setText(getResources().getString(R.string.lugar) + " " + "Remisión");}
             germen.setText(getResources().getString(R.string.germen)+" "+germentxt);
             tratamiento.setText(getResources().getString(R.string.tratamiento)+tratamientotxt);
 
