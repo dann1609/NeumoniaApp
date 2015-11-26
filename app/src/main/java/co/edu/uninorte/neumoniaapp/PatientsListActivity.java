@@ -197,7 +197,7 @@ public class PatientsListActivity extends AppCompatActivity implements PatientsC
         Intent intent = new Intent(context, MainActivity.class);
         Log.d("Desarrollo", "Se abrio el LA lista de pacientes");
         ModificarDatosActivity.active=false;
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
