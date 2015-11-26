@@ -55,7 +55,7 @@ public class ConfiguracionActivity extends AppCompatActivity {
                     Log.d("desarrollo", (getResources().getStringArray(R.array.configuracion))[i]);
                 }
                 editor.commit();
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Se ha guardado la configuración", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
