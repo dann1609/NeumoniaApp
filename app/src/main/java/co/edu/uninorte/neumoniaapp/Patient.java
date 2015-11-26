@@ -177,6 +177,7 @@ public class Patient implements Parcelable {
     public void setExam(Integer n){this.exam=n;}
     public void setExamType(Integer n){this.examType=n;}
     public Integer getExam(){return this.exam;}
+    public Integer getExamType(){return this.examType;}
     public String getExamTypeToString(){
         String txt="";
         if(this.examType==CURB65){txt="CURB65";}
