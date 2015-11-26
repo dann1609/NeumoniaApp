@@ -37,7 +37,12 @@ public class RiesgoSocialActivity extends AppCompatActivity {
         adapter=new CheckAdapter(this,values);
         mLv.setAdapter(adapter);
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        if(ModificarDatosActivity.active){
+           fab.setImageResource(R.drawable.ic_menu_save);
+        }
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
